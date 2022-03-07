@@ -5,4 +5,5 @@ package com.cloud.service;
  * @date 2022/3/7
  */
 public interface TestService {
+
 }
