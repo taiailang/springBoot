@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-@FeignClient(value = "service-ribbon")
+//@FeignClient(value = "service-ribbon")
 public interface TestService {
 
     String test();

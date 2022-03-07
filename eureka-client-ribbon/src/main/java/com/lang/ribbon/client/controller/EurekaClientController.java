@@ -23,4 +23,13 @@ public class EurekaClientController {
     public String hello(String name){
         return "hello "+name+" this is ribbon spring cloud";
     }
+
+    /**
+     * 自测远程调用
+     * @return
+     */
+    @RequestMapping("test")
+    public String test(){
+        return template.getForObject("http://SERVICE-HI/test",String.class);
+    }
 }
