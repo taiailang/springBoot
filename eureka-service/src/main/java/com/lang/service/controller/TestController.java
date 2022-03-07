@@ -1,4 +1,4 @@
-package com.lang.springcloud.controller;
+package com.lang.service.controller;
 
 /**
  * @author 浪浪
