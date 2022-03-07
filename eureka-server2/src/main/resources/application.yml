@@ -1,0 +1,55 @@
+# 单台机器启动配置
+serviceUrl:
+  defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+
+## 集群启动配置
+#server:
+#  port: 8221 # 注册中心的端口号
+#
+#spring:
+#  application:
+#    # 应用名称 即：Application列（可以认为是服务分组的名称）
+#    name: config-center
+#
+#eureka:
+#  instance:
+#    # 本实例的访问主机，即：Status列中链接的hostname部分。 如果 prefer-ip-address 项设置为true，则这里将会使用对应服务的IP
+#    hostname: eureka-${server.port}
+#
+#    # 本实例ID，即：Status列中链接的文本部分。如果不写默认为（主机名：应用名称：端口号）。按实例ID来区分在Status中的链接
+#    instance-id: eureka-id-${server.port}
+#
+#    # 指定本实例的链接hostname部分用IP。
+#    prefer-ip-address: true
+#
+#  client:
+#    # 是否向注册中心注册自己，这里只有一台就不注册了
+#    register-with-eureka: true
+#
+#    # 要不要去注册中心获取其他服务的地址，这里只有一台就不需要了
+#    fetch-registry: true
+#
+#    service-url:
+#      # 注册中心提供服务的地址，服务器开放的通信地址，其它服务可以通过这个地址注册过来（就是发注册的请求给注册中心）
+#      # http://域名:端口  域名是要给别的服务能访问到的（测试的时候在本机所以用localhost了，也可以用127.0.0.1），端口就是本注册中心的端口${server.port}表示用的本注册中心的端口，即8201
+#      defaultZone: http://localhost:${server.port}/eureka, http://localhost:8201/eureka
+#
+#  server:
+#    # 是否允许开启自我保护模式
+#    enable-self-preservation: false
+#
+#    # Eureka服务器清理无效节点的时间间隔，单位：毫秒
+#    eviction-interval-timer-in-ms: 5000

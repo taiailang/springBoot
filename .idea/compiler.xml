@@ -7,15 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eureka-server1" />
+        <module name="eureka-client-fegin" />
+        <module name="eureka-server2" />
+        <module name="eureka-consumer" />
+        <module name="eureka-provider" />
         <module name="eureka-client-ribbon" />
-        <module name="eurake-client-fegin" />
-        <module name="eureka-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="eurake-client-fegin" target="1.8" />
+      <module name="eureka-client-fegin" target="1.8" />
       <module name="eureka-client-ribbon" target="1.8" />
-      <module name="eureka-service" target="1.8" />
+      <module name="eureka-consumer" target="1.6" />
+      <module name="eureka-provider" target="1.6" />
+      <module name="eureka-server1" target="1.8" />
+      <module name="eureka-server2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
